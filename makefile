@@ -110,7 +110,7 @@
 # ./Potential.f90 already in list
 
 # ------------------Macro-Defs---------------------
-F90=gfortran
+F90=gfortran 
 
 # -------------------End-macro-Defs---------------------------
 

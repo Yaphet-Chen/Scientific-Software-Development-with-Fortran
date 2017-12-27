@@ -34,7 +34,7 @@ if ( $ENV{FMKMF_F90} ) {
 } 
 else {
   print "\# FMKMF_F90 not set: using f90\n";
-  $f90="f90";
+  $f90="gfortran";
 }
 
 
