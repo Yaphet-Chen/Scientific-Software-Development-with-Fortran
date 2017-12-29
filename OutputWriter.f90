@@ -62,7 +62,7 @@ contains
         character(len=*), intent(in)                                            :: formatString
         character(len=len(formatString)+10)                                     :: FormatWithIndent
         if ( self%indentLevel > 0 ) then
-            write(FormatWithIndent, '(a,i2,2a)')'(', 4 * self%indentLevel, 'x,',&
+            write(FormatWithIndent, '(a,i2,2a)') '(', 4 * self%indentLevel, 'x,',&
             formatString(2:)
         else
             FormatWithIndent = formatString
@@ -141,7 +141,7 @@ contains
         write(self%fileUnit, form) sectionName
         self%indentLevel = self%indentLevel + 1
         if ( present(description) ) then
-        form = FormatWithIndent(self,'(a)')
+            form = FormatWithIndent(self,'(a)')
             write(self%fileUnit, form) description
         endif
     end subroutine StartSection
